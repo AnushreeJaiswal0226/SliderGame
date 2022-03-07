@@ -1,0 +1,97 @@
+:root{
+    --width: 300px;
+    --boardwidth: 400px;
+    --backgroundwidth: 500px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: black;
+}
+
+#instructions{
+    background-color: #5c4033; 
+    border-radius: 20px; 
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px 20px;
+    font-size: larger; 
+    font-family: 'Special Elite', cursive;
+}
+
+#gameOverTxtHolder{
+    font-family: 'Special Elite', cursive;
+    background-color: #5c4033; 
+    position: absolute; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
+    padding: 10px 20px; 
+    display: none;
+}
+
+#gameBoard{
+    width: var(--backgroundwidth);
+    height: 550px;
+    margin: 1% auto;
+    background-image: url("background.png");
+    background-size: var(--backgroundwidth);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+#game{
+    width: var(--boardwidth);
+    height: 550px;    
+    margin: 0% auto;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider{
+    visibility: hidden;
+}
+
+.animate{
+    animation: slide 3s infinite linear;
+}
+
+#btn{
+    display: block;  
+    font-family: 'Black Ops One', cursive; 
+    background-color: burlywood;
+}
+
+#btn:hover, #btn:active{
+    background-color: darkgoldenrod;
+}
+
+@keyframes slide {
+    0%{left: 0vw}
+    50%{left: var(--width);}
+    100%{left: 0vw}
+}
+
+@media screen and (max-width: 800px){
+    :root{
+        --width: 250px;
+        --boardwidth: 350px;
+        --backgroundwidth: 450px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    :root{
+        --width: 200px;
+        --boardwidth: 300px;
+        --backgroundwidth: 400px;
+    }
+}

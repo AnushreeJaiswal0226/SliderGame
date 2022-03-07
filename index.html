@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Game</title>
+
+    <!--Website icon-->
+    <link rel="shortcut icon" type="image/png" href="french-stick.png">
+
+    <!--Stylesheet and Tailwind css-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"/>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <div style="position: relative;">
+        <!--Instructions and Information-->
+        <div class="flex justify-center items-center"  id="instructions">
+            <p class="max-w-md w-full text-center text-white">
+                How to Play? <br>
+                <br>1. Arrange the slides on top of each other to reach the 25th slide. <br>
+                <br>2. Click on START to begin the game. <br>
+                <br>3. Use the STOP button to align the slides.</p>
+        </div>
+
+        <!--score and high scores-->
+        <div class="grid grid-cols-3 grid-rows-1 gap-0" id="holder">        
+            <div class="text-white text-2xl text-center m-auto select-none" id="scoreDisplay" style="font-family: 'Odibee Sans', cursive;">
+                <span>score: </span>
+                <span id="scoreEl">0</span>
+            </div>
+
+            <span class="text-2xl text-center m-auto text-white" id="title" style="font-family: 'Black Ops One', cursive;">SLIDER GAME</span>
+        
+            <div class="text-white text-2xl text-center m-auto select-none" id="highscoreDisplay" style="font-family: 'Odibee Sans', cursive;">
+                <span>best: </span>
+                <span id="highscoreEl">0</span>
+            </div>
+        </div>
+
+        <!--Hover Text-->
+        <div class="flex justify-center items-center" id="gameOverTxtHolder">
+            <p class="max-w-md w-full text-center text-white text-4xl" id="gameOverTxt"></p>
+        </div>
+
+        <!--Game Board-->
+        <div id="gameBoard">
+            <div id="game"></div>
+        </div>        
+
+        <!--Button-->
+        <div class="bg-transparent flex items-center justify-center">
+            <button class="w-40 py-1 rounded-full text-xl focus:outline-none select-none" id="btn"></button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
